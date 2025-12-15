@@ -5,6 +5,7 @@ import MainHeader from "@/components/elements/header";
 import MainFooter from "@/components/elements/footer";
 import { useData } from "@/components/Providers";
 import { compareVotesDesc } from "@/components/utils";
+import Card from "./card";
 
 
 export default function List() {
@@ -32,13 +33,7 @@ export default function List() {
 					</header>
 					<section className={styles.catsList}>
 						{getAllCats().map((cat: { url: string, id: number, votes: number }, index: any) => (
-							<article key={cat.id} className={styles.catCard+' '+styles[podium(index)]}>
-								<figure className={styles.catFigure}>
-									<img src={cat.url} />
-								</figure>
-								<div className={styles.votesDisplay}>With {cat.votes} votes!</div>
-								<div className={styles.position}>#{index+1}</div>
-							</article>
+							<Card cat={cat} index={index} podium={podium} key={cat.id} />
 						))}
 					</section>
 				</section>

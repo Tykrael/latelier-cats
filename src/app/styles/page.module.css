@@ -105,50 +105,69 @@
   position: relative;
   width: 25%;
   flex-grow: 1;
-  max-height: 25vw;
+  max-height: 15vw;
+  height: 15vw;
+  padding: 10px;
 }
-
-
 .catCard.first {
-  border: 1px solid blue;
   width: 40%;
   align-self: flex-end;
   order: 2;
+  height: 25vw;
+  max-height: 25vw;
 } 
 .catCard.second {
-  border: 1px solid red;
   width: 30%;
   align-self: flex-end;
   order: 1;
+  height: 25vw;
+  max-height: 20vw;
 } 
 .catCard.third {
-  border: 1px solid red;
   width: 30%;
   align-self: flex-end;
   order: 3;
+  height: 25vw;
+  max-height: 15vw;
+}
+.catCard .cardWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%; 
+  max-width: 100%;
+  max-height: 100%;
+  border: 2px solid darkgray;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
 } 
 .catCard figure {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.catCard img {
+.catCard figure img {
   display: block;
   max-width: 100%;
   max-height: 100%;
   height: auto;
+  border-radius: 10px;
 }
-.catCard .position{
+.cardWrapper .position{
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  top: 20px;
+  left: calc(50% - 24px);
   background: var(--text-primary);
   color: var(--background);
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #eee;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -162,18 +181,47 @@
   color: gold;
   width: 100px;
   height: 100px;
+  border-color: gold
 }
 .catCard.second .position{
   font-size: 50px;
   color: silver;
   width: 75px;
   height: 75px;
+  left:calc(50% - 37.5px);
+  border-color: silver;
 }
 .catCard.third .position{
-    width: 50px;
+  width: 50px;
   height: 50px;
   font-size: 25px;
   color: #cd7f32;
+  border-color: #cd7f32;
+  left:calc(50% - 25px);
+}
+.cardWrapper figcaption{
+  display: flex;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  justify-content: center;
+  align-items: flex-end;
+}
+.cardWrapper figcaption .captionWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 5px 8px;
+  border:1px solid black;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.cardWrapper .name{
+  color: white
 }
 
 /* Enable hover only on non-touch devices */
