@@ -1,4 +1,4 @@
-import styles from "@app/styles/page.module.css";
+import styles from "@/app/styles/page.module.css";
 import MainHeader from "@/components/elements/header";
 import MainFooter from "@/components/elements/footer";
 
