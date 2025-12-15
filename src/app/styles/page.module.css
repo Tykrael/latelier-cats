@@ -78,38 +78,102 @@
   text-decoration-thickness: 2px;
 }
 
-
-.ctas {
+.contentList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.contentList h2 {
+  display: none;
+}
+.catsList{
   display: flex;
   flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.catCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  order: 4;
+  position: relative;
+  width: 25%;
+  flex-grow: 1;
+  max-height: 25vw;
 }
 
-.ctas a {
+
+.catCard.first {
+  border: 1px solid blue;
+  width: 40%;
+  align-self: flex-end;
+  order: 2;
+} 
+.catCard.second {
+  border: 1px solid red;
+  width: 30%;
+  align-self: flex-end;
+  order: 1;
+} 
+.catCard.third {
+  border: 1px solid red;
+  width: 30%;
+  align-self: flex-end;
+  order: 3;
+} 
+.catCard figure {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.catCard img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+.catCard .position{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--text-primary);
+  color: var(--background);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
 }
-
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.catCard.first .position{
+  font-size: 75px;
+  color: gold;
+  width: 100px;
+  height: 100px;
 }
-
-a.secondary {
-  border-color: var(--button-secondary-border);
+.catCard.second .position{
+  font-size: 50px;
+  color: silver;
+  width: 75px;
+  height: 75px;
+}
+.catCard.third .position{
+    width: 50px;
+  height: 50px;
+  font-size: 25px;
+  color: #cd7f32;
 }
 
 /* Enable hover only on non-touch devices */
