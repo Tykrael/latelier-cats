@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { name: 'Home', href: '/' },
-  { name: 'List', href: '/list'}
+  { name: 'List', href: '/list/'}
 ];
 
 export default function MainFooter() {
