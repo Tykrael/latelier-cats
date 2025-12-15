@@ -22,18 +22,16 @@ export default function catDisplay() {
     }
 
     return (
-        <article className={styles.catDisplay}>
-            <h2>Cat Display Component</h2>            
-            <figure>
-                <img
-                    src={getCat().url} /*"/figure-placeholder.png"*/
-                    alt="Placeholder Cat"
-                    width="250"
-                />
-                <figcaption>Adorable Cat</figcaption>
-            </figure>
-            <button onClick={handleCatClick}>Like</button>
-            <p>Likes: {getCat().votes}</p>
+        <article className={styles.catCard}>
+			<div className={styles.cardWrapper} style={{backgroundImage: `url(${getCat().url})`}}>
+				<div className={styles.cardContents}>
+					<div className={styles.captionWrapper}>
+						<div className={styles.name}>{getCat().id}</div>
+						<button className={styles.likeButton} onClick={handleCatClick}>Like</button>
+					</div>
+				</div>
+				
+			</div>
         </article>
     );
 }

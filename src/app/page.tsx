@@ -8,8 +8,10 @@ export default function Home() {
 		<div className={styles.page}>
 			<main className={styles.main}>
 				<MainHeader />
-				<CatDisplay />
-				<CatDisplay />
+				<section className={styles.votingWrapper}>						
+					<CatDisplay />
+					<CatDisplay />
+				</section>
 				<MainFooter />
 			</main>
 		</div>

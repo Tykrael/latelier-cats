@@ -86,7 +86,6 @@
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
 }
-
 .contentList {
   display: flex;
   flex-direction: column;
@@ -208,7 +207,7 @@
   border-color: #cd7f32;
   left:calc(50% - 25px);
 }
-.cardWrapper figcaption{
+.cardWrapper .cardContents{
   display: flex;
   position:absolute;
   top:0;
@@ -218,7 +217,7 @@
   justify-content: center;
   align-items: flex-end;
 }
-.cardWrapper figcaption .captionWrapper{
+.cardWrapper .cardContents .captionWrapper{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -233,6 +232,27 @@
   color: white
 }
 
+.votingWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+  padding: 0 0 75px;
+  max-height: calc(100% - 400px);
+  height: calc(100% - 400px);
+} 
+.votingWrapper .catCard {
+  max-height: 100%;
+  height: calc(100vh - 300px) ;
+}
+
+.likeButton{
+  display: flex;
+  padding: 3px 8px;
+  background-color:green;
+  border-radius: 5px;
+}
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
@@ -243,5 +263,11 @@
   a.secondary:hover {
     background: var(--button-secondary-hover);
     border-color: transparent;
+  }
+
+  .likeButton:hover{
+    background: var(--button-primary-hover);
+    border-color: transparent;
+    cursor: pointer;
   }
 }
