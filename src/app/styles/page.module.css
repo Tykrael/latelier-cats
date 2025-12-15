@@ -240,7 +240,8 @@
   width: 100%;
   padding: 0 0 75px;
   max-height: calc(100% - 400px);
-  height: calc(100% - 400px);
+  height: 65vh;
+  /*fix floating height problem ...*/
 } 
 .votingWrapper .catCard {
   max-height: 100%;
