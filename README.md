@@ -1,7 +1,8 @@
 ## Getting Started
+[live test](https://enloccurrence.infinityfree.me/)
 
-Clone repo
-pull branch
-
-
-Npm run dev ...
+The steps
+1st Clone repo
+2nd pull branch
+3rd Npm run dev
+4th Enjoy !!

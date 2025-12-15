@@ -28,9 +28,6 @@ export default function List() {
 			<section className={styles.main}>
 				<MainHeader />
 				<section className={styles.contentList}>
-					<header>
-						<h2>List Page</h2>
-					</header>
 					<section className={styles.catsList}>
 						{getAllCats().map((cat: { url: string, id: number, votes: number }, index: any) => (
 							<Card cat={cat} index={index} podium={podium} key={cat.id} />
